@@ -1,17 +1,12 @@
 from desconto2 import Desconto,DescontoNormal,DescontoPremium,DescontoVip
 
+def aplicar_desconto(desconto: Desconto, valor: float) -> float:
+    return desconto.calcular(valor)
 
-normal = DescontoNormal()
-vip = DescontoVip()
-premium = DescontoPremium()
 
-valor = float(input("Digite o valor de produto: "))
+if __name__ == "__main__":
+    valor = 100
 
-tipo = input("Digite o tipo: ")
-
-if tipo == "normal":
-    print("o desconto é: ", normal.calcular(valor))
-elif tipo == "vip":
-    print("o desconto é: ", vip.calcular(valor))
-elif tipo == "premium":
-    print("o desconto é: ", premium.calcular(valor))
+    print("Normal:", aplicar_desconto(DescontoNormal(), valor))
+    print("VIP:", aplicar_desconto(DescontoVip(), valor))
+    print("Premium:", aplicar_desconto(DescontoPremium(), valor))
