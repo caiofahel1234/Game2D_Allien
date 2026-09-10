@@ -1,4 +1,4 @@
-from desconto2 import Desconto,DescontoNormal,DescontoPremium,DescontoVip
+from desconto import Desconto,DescontoNormal,DescontoPremium,DescontoVip
 
 def aplicar_desconto(desconto: Desconto, valor: float) -> float:
     return desconto.calcular(valor)
